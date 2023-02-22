@@ -1,10 +1,11 @@
 {
-  "name": "react-jw-player",
+  "name": "@apartmenttherapy/react-jw-player",
   "version": "1.19.1",
   "description": "A React component for launching JW Player instances on the client.",
   "main": "dist/react-jw-player.js",
   "scripts": {
     "build": "babel src --out-dir dist",
+    "prepare": "npm run build",
     "clean": "rimraf dist",
     "lint": "eslint .",
     "prepublish": "npm run lint && npm run test && npm run clean && npm run build",
@@ -15,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/micnews/react-jw-player.git"
+    "url": "git+https://github.com/apartmenttherapy/react-jw-player.git"
   },
   "keywords": [
     "react",
@@ -25,12 +26,12 @@
     "autoplay",
     "events"
   ],
-  "author": "Mic Network, Inc.",
+  "author": "Apartment Therapy Media",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/micnews/react-jw-player/issues"
+    "url": "https://github.com/apartmenttherapy/react-jw-player/issues"
   },
-  "homepage": "https://github.com/micnews/react-jw-player#readme",
+  "homepage": "https://github.com/apartmenttherapy/react-jw-player#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.2.3",
@@ -61,9 +62,30 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
-    "react": "^15.4.1 || ^16.0.0"
+    "react": "^15.4.1 || ^16.0.0 || ^17.0.0"
   },
   "dependencies": {
     "react-fast-compare": "^2.0.1"
-  }
+  },
+  "files": [
+    "dist/react-jw-player.js",
+    "dist/player-prop-types.js",
+    "dist/default-props.js",
+    "dist/create-event-handlers/index.js",
+    "dist/create-event-handlers/on-ad-play.js",
+    "dist/create-event-handlers/on-before-play.js",
+    "dist/create-event-handlers/on-full-screen.js",
+    "dist/create-event-handlers/on-mute.js",
+    "dist/create-event-handlers/on-play.js",
+    "dist/create-event-handlers/on-time.js",
+    "dist/create-event-handlers/on-video-load.js",
+    "dist/helpers/get-curried-on-load.js",
+    "dist/helpers/get-event-name-from-prop.js",
+    "dist/helpers/get-player-opts.js",
+    "dist/helpers/initialize.js",
+    "dist/helpers/install-player-script.js",
+    "dist/helpers/remove-jw-player-instance.js",
+    "dist/helpers/set-jw-player-defaults.js",
+    "dist/helpers/should-component-update.js"
+  ]
 }
